@@ -26,4 +26,4 @@ services:
 
 networks:
   mern-network:
-    driver: bridgegit status
+    driver: bridge
