@@ -1,8 +1,6 @@
 services:
   backend:
-    build:
-      context: ./mern-demo
-      dockerfile: server/Dockerfile
+    image: trandangkhoaa/mern-backend:1.0
     container_name: mern-backend
     ports:
       - "5000:5000"
@@ -12,8 +10,7 @@ services:
       - mern-network
 
   frontend:
-    build:
-      context: ./mern-demo/client
+    image: trandangkhoaa/mern-frontend:2.0
     container_name: mern-frontend
     ports:
       - "5173:5173"
@@ -26,4 +23,4 @@ services:
 
 networks:
   mern-network:
-    driver: bridgecode docker-compose.hub.yml
+    driver: bridge
